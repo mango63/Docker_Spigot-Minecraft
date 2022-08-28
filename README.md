@@ -10,7 +10,7 @@ Credit to SirSquidness & Piorax for there massive support
 
 # Current Setup
 
-Set up to Work With Minecraft Version 1.17 this can be changed via editing the Dockerfile. 
+Set up to Work With Minecraft Version 1.19.2 this can be changed via editing the Dockerfile. 
 
 When player connect they are allocated a plot and they can only build in that plot.
 
@@ -19,9 +19,9 @@ This can be change see Customisation.
 
 # Getting Started
 
-You will ned to install docker (hence the name)and git.
+You will need to install docker (hence the name) and git.
 
-Once cloned run the  below command to start a server
+Once cloned run the below command to start a server
 
 ./build.sh minecraft-XXXXX
 
@@ -77,4 +77,3 @@ To edit what items are banned:
 
 - Make it so that plot world can be configured to hosts liking
 - Find a better way of managing Lag Machines
-# Docker_Spigot-Minecraft
