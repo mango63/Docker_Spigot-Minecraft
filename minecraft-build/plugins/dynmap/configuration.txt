@@ -176,13 +176,29 @@ components:
     show-mcr: false
     
    # Note: more than one logo component can be defined
+  #- class: org.dynmap.ClientComponent
+   # type: logo
+   # text: "PAX"
+   # logourl: "pax.png"
+   # linkurl: "http://www.paxaustralia.com.au"
+   # Valid positions: top-left, top-right, bottom-left, bottom-right
+   # position: bottom-left
+
   - class: org.dynmap.ClientComponent
     type: logo
-    text: "PAX"
-    logourl: "pax.png"
-    linkurl: "http://www.paxaustralia.com.au"
+    text: "DREAMHACK Melbourne"
+    logourl: "dreamhackmelbourne.png"
+    linkurl: "https://dreamhack.com/melbourne/"
     Valid positions: top-left, top-right, bottom-left, bottom-right
     position: bottom-left
+
+  - class: org.dynmap.ClientComponent
+    type: logo
+    text: "The BIG LAN"
+    logourl: "big_lan.png"
+    linkurl: "https://www.thebiglan.com/"
+    Valid positions: top-left, top-right, bottom-left, bottom-right
+    position: bottom-right
 
   - class: org.dynmap.ClientComponent
     type: logo
@@ -191,14 +207,14 @@ components:
     linkurl: "https://www.lanslide.com.au"
     Valid positions: top-left, top-right, bottom-left, bottom-right
     position: bottom-right
-
-  - class: org.dynmap.ClientComponent
-    type: logo
-    text: "RFLAN"
-    logourl: "rflan_logo.png"
-    linkurl: "https://www.rflan.org"
-    Valid positions: top-left, top-right, bottom-left, bottom-right
-    position: bottom-right
+ 
+#  - class: org.dynmap.ClientComponent
+  #  type: logo
+  #  text: "RFLAN"
+  #  logourl: "rflan_logo.png"
+  #  linkurl: "https://www.rflan.org"
+  #  Valid positions: top-left, top-right, bottom-left, bottom-right
+  #  position: bottom-right
 
 
   #- class: org.dynmap.ClientComponent
