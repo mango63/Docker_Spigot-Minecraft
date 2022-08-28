@@ -31,7 +31,7 @@ Once cloned run the  below command to start a server
 
 As the above moved from being free to a paid version you will need to download the file's yourself.
 
-This means that you will need to manually bash in to the container and downlaod the file's
+This means that you will need to manually downlaod the file's and put them in te plugins folder
 
 I have left the config files in place so you will only need to downlaod the pulgins
 
