@@ -26,7 +26,7 @@ RUN wget -O proto.zip https://ci.dmulloy2.net/job/ProtocolLib/lastSuccessfulBuil
 RUN unzip proto.zip
 RUN wget -O luckPerm.zip https://ci.lucko.me/view/LuckPerms/job/LuckPerms/lastSuccessfulBuild/artifact/bukkit/loader/build/libs/*zip*/libs.zip
 RUN unzip luckPerm.zip
-RUN wget https://dynmap.us/releases/Dynmap-3.2-beta-1-spigot.jar
+RUN wget https://dynmap.us/releases/Dynmap-3.4-spigot.jar
 ## Plugins missing see README for more details
 
 FROM jdk as final
@@ -40,7 +40,8 @@ COPY --from=build /build/jars/EssentialsXAntiBuild*.jar plugins/
 COPY --from=build /build/jars/EssentialsXChat*.jar plugins/
 COPY --from=build /build/jars/EssentialsXProtect*.jar plugins/
 COPY --from=build /build/jars/EssentialsXSpawn*.jar plugins/
-COPY --from=build /build/libs/LuckPerms-bukkit*.jar plugins/
+COPY --from=build /build/libs/LuckPerms-Bukkit*.jar plugins/
+
 RUN echo "eula=true" > eula.txt
 
 RUN apt-get install nano

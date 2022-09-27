@@ -4,5 +4,5 @@ SECONDS=0
 
 [[ -z $VERSION ]] && VERSION=1.14.4
 
-docker_build minecraft_survival
+docker_build minecraft-survival
 echo "Built in ${SECONDS} seconds"
