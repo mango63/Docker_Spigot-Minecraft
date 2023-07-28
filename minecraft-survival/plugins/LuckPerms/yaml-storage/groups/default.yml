@@ -1,9 +1,6 @@
 name: default
 permissions:
-- essentials.build:
-    value: true
-    context:
-      world: plotworld
+- essentials.build
 - modifyplotworld.*
 - modifyworld.*
 - plots.list.*
