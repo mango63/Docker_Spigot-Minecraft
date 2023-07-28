@@ -17,6 +17,10 @@ When player connect they are allocated a plot and they can only build in that pl
 I have disabled the use and creation of  egg's, golem's, minecart's and weither's due to players spawning mobs to lag out servers
 This can be change see Customisation.
 
+World Eidt has introduced a "Human Check" when downloading thier mod via the downalod page,
+This had broken the auto downlaod as i get a 403 Error, you will need to download this manually.
+
+
 # Getting Started
 
 You will need to install docker (hence the name) and git.
