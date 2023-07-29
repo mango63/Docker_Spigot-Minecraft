@@ -1,5 +1,5 @@
 FROM base:latest AS jdk
-ARG spigot_version=1.19.2
+ARG spigot_version=latest
 ENV SPIGOT_VERSION=${spigot_version}
 ARG java_version=17
 ENV JAVA_VERSION=${java_version}
