@@ -1,7 +1,7 @@
 FROM base:latest AS jdk
 ARG spigot_version=latest
 ENV SPIGOT_VERSION=${spigot_version}
-ARG java_version=17
+ARG java_version=21
 ENV JAVA_VERSION=${java_version}
 # todo: collapse these to single command
 RUN sed --in-place --regexp-extended "s/(\/\/)(archive\.ubuntu)/\1au.\2/" /etc/apt/sources.list \
@@ -33,15 +33,15 @@ RUN unzip mv.zip
 RUN wget https://ci.dmulloy2.net/job/ProtocolLib/lastSuccessfulBuild/artifact/build/libs/ProtocolLib.jar
 RUN wget -O luckPerm.zip https://ci.lucko.me/view/LuckPerms/job/LuckPerms/lastSuccessfulBuild/artifact/bukkit/loader/build/libs/*zip*/libs.zip
 RUN unzip luckPerm.zip
-RUN wget https://dynmap.us/releases/Dynmap-3.6-spigot.jar
+RUN wget https://dynmap.us/builds/dynmap/DynmapCore-3.7-beta-7.jar
 RUN wget https://github.com/MilkBowl/Vault/releases/download/1.7.3/Vault.jar
 RUN wget https://github.com/PryPurity/WorldBorder/releases/download/v2.1.5/WorldBorder.jar
-#RUN wget -O worldedit.jar https://dev.bukkit.org/projects/worldedit/files/latest
+RUN wget -O worldedit.jar https://dev.bukkit.org/projects/worldedit/files/latest
 ## Broken auto download as there is a human check to prevent this, kepp getting 403 error 
 #RUN wget https://github.com/kangarko/ChatControl-Pro/releases/download/8.10.5/ChatControl-8.10.5.jar
 ## Moved to Premium version see README for more details
 
-FROM jdk as final
+FROM jdk AS final
 ADD server.properties commands.yml start.sh advertise.py /spigot/
 COPY plugins plugins/
 #COPY --from=build /build/ChatControl-*.jar plugins/
