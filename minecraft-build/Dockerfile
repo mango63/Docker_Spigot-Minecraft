@@ -19,7 +19,7 @@ RUN apt-get install git -y && chown spigot:spigot . -R
 USER spigot
 RUN wget -O BuildTools.jar \
     https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar && \
-    java -jar BuildTools.jar --rev $SPIGOT_VERSION
+    java -jar BuildTools.jar --rev ${SPIGOT_VERSION}
 RUN wget -O plt2dyn.zip https://ci.athion.net/job/Plot2Dynmap/lastSuccessfulBuild/artifact/build/libs/*zip*/libs.zip
 RUN unzip plt2dyn.zip
 RUN rm ./libs/*-javadoc.jar
