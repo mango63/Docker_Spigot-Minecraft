@@ -1,11 +1,11 @@
 FROM base:latest AS jdk
 ARG spigot_version=latest
 ENV SPIGOT_VERSION=${spigot_version}
-ARG java_version=17
+ARG java_version=23
 ENV JAVA_VERSION=${java_version}
 # todo: collapse these to single command
-#RUN sed --in-place --regexp-extended "s/(\/\/)(archive\.ubuntu)/\1au.\2/" /etc/apt/sources.list
-RUN apt-get install -y software-properties-common \ 
+RUN sed --in-place --regexp-extended "s/(\/\/)(archive\.ubuntu)/\1au.\2/" /etc/apt/sources.list
+    && apt-get install -y software-properties-common \ 
     && apt-add-repository ppa:openjdk-r/ppa && \
        apt-get update
 RUN apt-get install -y ca-certificates-java
