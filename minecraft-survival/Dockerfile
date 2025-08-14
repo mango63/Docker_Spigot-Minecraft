@@ -1,7 +1,7 @@
 FROM base:latest AS jdk
 ARG spigot_version=latest
 ENV SPIGOT_VERSION=${spigot_version}
-ARG java_version=17
+ARG java_version=23
 ENV JAVA_VERSION=${java_version}
 # todo: collapse these to single command
 RUN sed --in-place --regexp-extended "s/(\/\/)(archive\.ubuntu)/\1au.\2/" /etc/apt/sources.list \
@@ -26,7 +26,7 @@ RUN wget -O proto.zip https://ci.dmulloy2.net/job/ProtocolLib/lastSuccessfulBuil
 RUN unzip proto.zip
 RUN wget -O luckPerm.zip https://ci.lucko.me/view/LuckPerms/job/LuckPerms/lastSuccessfulBuild/artifact/bukkit/loader/build/libs/*zip*/libs.zip
 RUN unzip luckPerm.zip
-RUN wget https://dynmap.us/releases/Dynmap-3.4-spigot.jar
+RUN wget https://dynmap.us/releases/Dynmap-3.7-beta-10-spigot.jar
 ## Plugins missing see README for more details
 
 FROM jdk as final
