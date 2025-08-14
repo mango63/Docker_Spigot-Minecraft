@@ -10,7 +10,7 @@ Credit to SirSquidness & Piorax for there massive support
 
 # Current Setup
 
-Set up to Work With Minecraft Version 1.19.2 this can be changed via editing the Dockerfile. 
+Set up to Work With Minecraft Version 1.21.8 this can be changed via editing the Dockerfile. 
 
 When player connect they are allocated a plot and they can only build in that plot.
 
