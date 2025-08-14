@@ -87,8 +87,8 @@ world-join-commands:
     # - [OP] - Execute the command as the player, but with OP permissions (e.g. "[OP]warp opsOnlyArea")
     # - [BPLAYER] - Execute the command as the player, but through the BungeeCord Proxy (requires 'bungeecord-hook' to be true and the proxy to be setup properly)
     # - [BCONSOLE] - Execute the command as the BungeeCord Proxy console (requires 'bungeecord-hook' to be true and the proxy to be setup properly)
-#    command-list:
-      - "msg {player} You are now in {world}"
+    command-list:
+      - " "
     permission: ""
     delay: 0
 

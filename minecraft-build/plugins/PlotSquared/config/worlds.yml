@@ -4,20 +4,23 @@ worlds:
       width: 7
       height: 64
       block: oak_planks:100
+      flags: {}
     plot:
       size: 32
       floor: grass_block
       filling: dirt
       height: 64
-      biome: FOREST
+      biome: minecraft:forest
       auto_merge: false
       bedrock: true
       create_signs: true
+      sign_material: OAK_WALL_SIGN
     wall:
       height: 64
       filling: granite:100
       block_claimed: sandstone_slab:100
       block: stone_slab:100
+      place_top_block: true
     home:
       default: side
       allow-nonmembers: false
@@ -35,6 +38,7 @@ worlds:
       use: false
     chat:
       enabled: false
+      forced: false
     limits:
       max-members: 128
     world:
@@ -42,6 +46,10 @@ worlds:
       gamemode: creative
       min_height: 1
       border: false
+      component_below_bedrock: false
+      max_gen_height: 319
+      min_gen_height: -64
+      border_size: 1
     event:
       spawn:
         egg: false
@@ -51,4 +59,4 @@ worlds:
     mob_spawner_spawning: false
     flags: {}
     misc_spawn_unowned: false
-configuration_version: post_flattening
+configuration_version: v5

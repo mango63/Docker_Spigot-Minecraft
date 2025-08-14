@@ -6,7 +6,7 @@
 # Groups support all operators you would typically use on rules except:
 # ignore type
 #
-# For help, see https://github.com/kangarko/ChatControl-Red/wiki/Rules
+# For help, see https://docs.mineacademy.org/chatcontrol/rules
 # -----------------------------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------------------
@@ -19,12 +19,12 @@ group advertisement
 ignore perm chatcontrol.bypass.ad
 
 # Do not filter ads in the commands below.
-ignore command /brush|/auction|/auc|/register|/reg|/login|l
+ignore command /brush|/auction|/auc|/register|/reg|/login|/l
 
-# Ignore WorldEdit
-ignore command //
+# Ignore WorldEdit (ignores anything starting with //)
+ignore command //*
 
-then warn {warn_prefix} Please do not advertise other websites or IP addresses.
+then warn {prefix_warn} Please do not advertise other websites or IP addresses.
 
 # Notify players with "chatcontrol.notify.ad" permission.
 # 1) First part after "then notify" is the permission players need to see the second part.
@@ -43,17 +43,18 @@ group swear
 ignore perm chatcontrol.bypass.swear
 
 # Do not filter swears in the commands below.
-ignore command /brush|/auction|/auc|/register|/reg|/login|l
+ignore command /brush|/auction|/auc|/register|/reg|/login|/l
 
-# Ignore WorldEdit
-ignore command //
+# Ignore WorldEdit (ignores anything starting with //).
+ignore command //*
 
-then warn {warn_prefix} Swearing is prohibited on this server.
+# Send a warning message where player can see the message that got blocked.
+then warn {prefix_warn} <hover:show_text:'<gray>Caught message:\n{original_message}'>Swearing is prohibited on this server!</hover>
 
 # Notify players with "chatcontrol.notify.ad" permission.
 # 1) First part after "then notify" is the permission players need to see the second part.
 # 2) The second part is the message itself or a chat format.
-then notify chatcontrol.notify.swear &8[&7Swear&8] &7{player}: &f{original_message}
+then notify chatcontrol.notify.swear <dark_gray>[<gray>Swear<dark_gray>] <gray>{player}: <white>{original_message}
 
 # What the matching part of the message should be replaced to?
 # If you specify "@prolong " before and then one letter only, it will automatically
